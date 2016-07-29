@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import time
 import RPi.GPIO as GPIO
 import math
@@ -30,8 +31,8 @@ while True:
     if (time.time() * 1000 - count_time * 1000) > 100:
     	if not(printed): 
             number = int((math.floor(c/2)))
-            if number == 0:
-                print ('10')
+            if number == 10:
+                print ('0')
             else:
                 print number
         c = 0
