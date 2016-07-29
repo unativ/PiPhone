@@ -29,7 +29,11 @@ GPIO.add_event_detect(rotary_dial_pin, GPIO.BOTH, callback=count, bouncetime=5)
 while True:
     if (time.time() * 1000 - count_time * 1000) > 100:
     	if not(printed): 
-            print int((math.floor(c/2)))
+            number = int((math.floor(c/2)))
+            if number == 0:
+                print ('10')
+            else:
+                print number
         c = 0
         printed = True
     time.sleep(0.1)
